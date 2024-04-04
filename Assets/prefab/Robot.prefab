@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5757934117710692151}
   - component: {fileID: 1300627951117509764}
   - component: {fileID: 1043923230991045274}
+  - component: {fileID: 8254976823444351039}
   m_Layer: 0
   m_Name: Robot
   m_TagString: Untagged
@@ -157,4 +158,19 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
+--- !u!114 &8254976823444351039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 323469586138667730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 809bdb4b26ca35e45aeda4c8e3f287db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  vertical: 0
+  changeTime: 3
