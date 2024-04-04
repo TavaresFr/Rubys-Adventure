@@ -6,7 +6,15 @@ public class NewBehaviourScript : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Object that entered the trigger : " + other);
+        RubyControl controller = other.GetComponent<RubyControl>();
+
+        if (controller != null)
+        {
+            if (controller.health < controller.maxHealth)
+            {
+                controller.ChangeHealth(1);
+                Destroy(gameObject);
+            }
+        }
     }
 }
-
