@@ -88,7 +88,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!61 &1300627951117509764
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -118,7 +118,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.017180443, y: -0.8332497}
@@ -171,10 +171,10 @@ Animator:
   m_GameObject: {fileID: 323469586138667730}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b701a9d386cbd004d904c58559ecf4db, type: 2}
+  m_Controller: {fileID: 9100000, guid: 4295ae4da1bf60f4580aba2190e3bf80, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -194,9 +194,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 809bdb4b26ca35e45aeda4c8e3f287db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 6
   vertical: 0
-  changeTime: 3
+  changeTime: 1.5
   smokeEffect: {fileID: 1619460500366309169, guid: 8a65efbc80155b94aa5163cb9c33646d, type: 3}
 --- !u!1001 &1017960894430747968
 PrefabInstance:
