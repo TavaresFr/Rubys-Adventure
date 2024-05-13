@@ -30,8 +30,8 @@ public class Projectile : MonoBehaviour
         if (e != null)
         {
             e.Fix();
+            Destroy(gameObject);
         }
 
-        Destroy(gameObject);
     }
 }

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -8307186976040128274}
   - component: {fileID: 5537424072475601373}
   m_Layer: 0
-  m_Name: Robot
+  m_Name: Robot_H
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -196,7 +196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  vertical: 1
+  vertical: 0
   changeTime: 3
   smokeEffect: {fileID: 1619460500366309169, guid: 8a65efbc80155b94aa5163cb9c33646d, type: 3}
 --- !u!82 &5537424072475601373

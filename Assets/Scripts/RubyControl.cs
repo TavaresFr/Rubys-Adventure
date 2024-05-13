@@ -7,22 +7,18 @@ public class RubyControl : MonoBehaviour
     public float speed = 3.0f;
 
     public int maxHealth = 5;
-
+    public float timeInvincible = 2.0f;
     public GameObject projectilePrefab;
 
     public AudioClip throwSound;
     public AudioClip hitSound;
 
     public int health { get { return currentHealth; } }
-    int currentHealth;
-
-    public float timeInvincible = 2.0f;
-    bool isInvincible;
+    public int currentHealth;
+    public bool isInvincible;
     float invincibleTimer;
 
     Rigidbody2D rigidbody2d;
-    float horizontal;
-    float vertical;
 
     Animator animator;
     Vector2 lookDirection = new Vector2(1, 0);
@@ -43,8 +39,8 @@ public class RubyControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        horizontal = Input.GetAxis("Horizontal");
-        vertical = Input.GetAxis("Vertical");
+        float horizontal = Input.GetAxis("Horizontal");
+        float vertical = Input.GetAxis("Vertical");
 
         Vector2 move = new Vector2(horizontal, vertical);
 
@@ -57,6 +53,12 @@ public class RubyControl : MonoBehaviour
         animator.SetFloat("Look X", lookDirection.x);
         animator.SetFloat("Look Y", lookDirection.y);
         animator.SetFloat("Speed", move.magnitude);
+
+        Vector2 position = rigidbody2d.position;
+
+        position = position + move * speed * Time.deltaTime;
+
+        rigidbody2d.MovePosition(position);
 
         if (isInvincible)
         {
@@ -82,15 +84,6 @@ public class RubyControl : MonoBehaviour
                 }
             }
         }
-    }
-
-    void FixedUpdate()
-    {
-        Vector2 position = rigidbody2d.position;
-        position.x = position.x + speed * horizontal * Time.deltaTime;
-        position.y = position.y + speed * vertical * Time.deltaTime;
-
-        rigidbody2d.MovePosition(position);
     }
 
     public void ChangeHealth(int amount)

@@ -13,14 +13,16 @@ public class DamageZone : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        void OnTriggerEnter2D(Collider2D other)
-        {
-            RubyControl controller = other.GetComponent<RubyControl>();
+        
+    }
 
-            if (controller != null)
-            {
-                controller.ChangeHealth(-1);
-            }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        RubyControl controller = other.GetComponent<RubyControl>();
+
+        if (controller != null)
+        {
+            controller.ChangeHealth(-10);
         }
     }
 }
